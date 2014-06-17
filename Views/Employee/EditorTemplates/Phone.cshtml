@@ -1,0 +1,14 @@
+﻿@model TesteNested2.Models.Phone
+
+@{
+    ViewBag.Title = "Phone";
+}
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.PhoneNumber)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.PhoneNumber)
+    @Html.ValidationMessageFor(model => model.PhoneNumber)
+    @Html.ActionLink("excluir", "DeletePhone", "Employee", new { id = Model.PhoneID }, null)
+</div>
